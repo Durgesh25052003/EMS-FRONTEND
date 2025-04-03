@@ -23,7 +23,6 @@ const AdminEmpDash = () => {
                 const stats = leaves.reduce((acc, leave) => {
                     acc[leave.status]++;
                     acc.Total++;
-                    console.log(acc);
                     return acc;
                 }, { Pending: 0, Approved: 0, Rejected: 0, Total: 0 });
 
