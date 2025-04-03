@@ -2,12 +2,12 @@ import axios from 'axios'
 import { FaGoodreadsG } from 'react-icons/fa';
 
 const userApi = axios.create({
-  baseURL: 'http://127.0.0.1:3000/api/v1/user',
+  baseURL: 'https://ems-backend-1.vercel.app/api/v1/user',
   withCredentials: true,
 });
 
 const leaveApi = axios.create({
-  baseURL: 'http://127.0.0.1:3000/api/v1/leave',
+  baseURL: 'https://ems-backend-1.vercel.app/api/v1/leave',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ const leaveApi = axios.create({
 });
 
 const eventApi = axios.create({
-  baseURL: 'http://127.0.0.1:3000/api/v1/events',
+  baseURL: 'https://ems-backend-1.vercel.app/api/v1/events',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
