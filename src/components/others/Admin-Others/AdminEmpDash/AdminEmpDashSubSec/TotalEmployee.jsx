@@ -5,7 +5,7 @@ import { addTask } from '../../../../../service/apiService';
 const EmployeeCard = () => {
   // Sample employee data - replace with your actual data source
   const { data } = useContext(AuthContext);
-  console.log(data,"🌟🌟🌟")
+  
   const [Employee, setEmployee] = useState([]);
   const [showTaskPopup, setShowTaskPopup] = useState(false);
   const [selectedEmployee, setSelectedEmployee] = useState(null);
@@ -23,7 +23,7 @@ const EmployeeCard = () => {
   };
 
   const handleTaskSubmit = (taskDetails) => {
-    console.log('Task assigned to:', selectedEmployee.firstName, taskDetails);
+   
     addTask(selectedEmployee._id,taskDetails);
     // Add your task submission logic here
     setShowTaskPopup(false);
