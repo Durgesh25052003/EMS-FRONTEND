@@ -10,7 +10,6 @@ export const AuthProvider = ({ children }) => {
         const fetchEmployee = async () => {
             try {
                 const response = await getEmployee();
-                console.log(response)
                 setData(response);
             } catch (error) {
                 console.error('Error fetching employee data:', error);
