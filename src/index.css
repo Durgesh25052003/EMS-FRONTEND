@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+  background-color: #111;
+}
+#TaskList::-webkit-scrollbar{
+  display: none;
+}
+.total-employee-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.total-employee-popup h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
