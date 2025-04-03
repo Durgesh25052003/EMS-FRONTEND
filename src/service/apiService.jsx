@@ -30,7 +30,6 @@ export const login = async ({ email, password }) => {
       email,
       password
     });
-    console.log(res)
     if (res.data.token) {
       // Remove manual cookie setting as it should be handled by the server
       localStorage.setItem("token", res.data.token);
@@ -110,7 +109,6 @@ export const deleteLeave = async (id) => {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     });
-    console.log(res)
   } catch (error) {
     console.log(error)
   }
@@ -119,7 +117,6 @@ export const deleteLeave = async (id) => {
 export const updateLeave = async (id, updatedLeave) => {
   try {
     const res = await leaveApi.put(`/leaves/${id}`, updatedLeave);
-    console.log(res)
     return res
   } catch (error) {
     console.log(error)
@@ -133,7 +130,6 @@ export const createLeave = async (leave) => {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     })
-    console.log(res)
   } catch (error) {
     console.log(error)
   }
@@ -144,7 +140,6 @@ export const forgetPassword = async (email) => {
     const res = await userApi.post('/forget-Password', {
       email
     })
-    console.log(res)
   } catch (error) {
     console.log(error)
   }
@@ -207,7 +202,7 @@ export const addEvent = async (event, user) => {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     })
-    console.log(res)
+
   } catch (error) {
     console.log(error)
   }
@@ -224,7 +219,7 @@ export const addEmpEvent = async (emp, event) => {
         'Authorization': `Bearer ${token}`
       }
     });
-    console.log(res);
+
     return res;
   } catch (error) {
     console.log(error);
@@ -240,7 +235,7 @@ export const updateProfile = async (id, data) => {
         'Content-Type': 'multipart/form-data'
       }
     });
-    console.log(res)
+
     return res
   } catch (error) {
     console.log(error)
