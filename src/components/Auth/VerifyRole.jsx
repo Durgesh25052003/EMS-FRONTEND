@@ -2,7 +2,6 @@ import { verifyToken } from "../../service/apiService";
 
 const authCheck = async () => {
     const token = localStorage.getItem('token');
-    console.log(token)
     if (!token) {
         return { authorized: false, role: null }
     }
