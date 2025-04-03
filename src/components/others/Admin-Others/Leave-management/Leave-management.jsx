@@ -4,81 +4,7 @@ import { useLeaveContext } from "../../../../context/leaveContext"
 import { updateLeave } from "../../../../service/apiService"
 
 // Mock data - replace with your actual API fetch
-const mockLeaveRequests = [
-  {
-    id: 1,
-    employeeName: "John Doe",
-    employeeId: "EMP001",
-    department: "Engineering",
-    leaveType: "Sick Leave",
-    startDate: "2025-03-25",
-    endDate: "2025-03-26",
-    duration: "2 days",
-    reason: "Medical appointment and recovery",
-    status: "pending",
-    appliedOn: "2025-03-22",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 2,
-    employeeName: "Jane Smith",
-    employeeId: "EMP002",
-    department: "Marketing",
-    leaveType: "Vacation",
-    startDate: "2025-04-10",
-    endDate: "2025-04-17",
-    duration: "8 days",
-    reason: "Family vacation",
-    status: "pending",
-    appliedOn: "2025-03-20",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 3,
-    employeeName: "Michael Johnson",
-    employeeId: "EMP003",
-    department: "Finance",
-    leaveType: "Personal Leave",
-    startDate: "2025-03-30",
-    endDate: "2025-03-30",
-    duration: "1 day",
-    reason: "Personal matters",
-    status: "approved",
-    appliedOn: "2025-03-18",
-    approvedOn: "2025-03-19",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 4,
-    employeeName: "Emily Davis",
-    employeeId: "EMP004",
-    department: "Human Resources",
-    leaveType: "Sick Leave",
-    startDate: "2025-03-24",
-    endDate: "2025-03-24",
-    duration: "1 day",
-    reason: "Not feeling well",
-    status: "rejected",
-    appliedOn: "2025-03-21",
-    rejectedOn: "2025-03-22",
-    rejectionReason: "Critical team meeting scheduled",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 5,
-    employeeName: "Robert Wilson",
-    employeeId: "EMP005",
-    department: "Engineering",
-    leaveType: "Vacation",
-    startDate: "2025-04-05",
-    endDate: "2025-04-09",
-    duration: "5 days",
-    reason: "Personal trip",
-    status: "pending",
-    appliedOn: "2025-03-15",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-]
+
 
 const LeaveManagement = () => {
   const [leaves, setLeave] = useState([])
@@ -137,13 +63,12 @@ const LeaveManagement = () => {
         leave.status="Rejected"
       }
     })
-    console.log(updateRejectedLeaves)
+    
 
     const updateRejectedLeave = leaves.find(leave => leave._id === id)
-    console.log(updateRejectedLeave)
+  
     // // Calling Api to update the update leave collection
     // updateLeave(id,updateRejectedLeave)
-    console.log(leaves)
     setSelectedLeaveId(id)
     setShowRejectionModal(true)
   }
@@ -167,7 +92,7 @@ const LeaveManagement = () => {
    const currRejectedLeave=updatedLeaves.find(leave=>{
     return leave._id===selectedLeaveId
    })
-   console.log(currRejectedLeave)
+   
 // Calling Api to update the update leave collection
    updateLeave(selectedLeaveId, currRejectedLeave)
     
