@@ -19,7 +19,7 @@ const EventManagement = () => {
     e.preventDefault();
     // Add your event creation logic here
     const res=await createEvent(eventData)
-    console.log(res)
+
   };
 
   return (
