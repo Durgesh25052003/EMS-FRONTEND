@@ -64,7 +64,6 @@ const EmployeeDashBoard = () => {
     console.log(EmployeeStats)
     const res = await updateTaskStatus(user._id, task._id, 'Completed')
     if (res) {
-      console.log(res)
       console.log('Task status updated')
     }
   }
@@ -73,7 +72,7 @@ const EmployeeDashBoard = () => {
     const completedTasks = tasks.filter(task => {
       return task.status === 'Completed'
     }).length
-    console.log(completedTasks)
+    
 
     const projectProgess = Math.round((completedTasks / tasks.length) * 100)
     setEmployeeStats({
@@ -88,7 +87,7 @@ const EmployeeDashBoard = () => {
 const { events, isLoading, error } = useEvents();
 const { MonthComp } = useContext(SetDateContext)
 
-console.log(Events)
+
 
 useEffect(() => {
   if (MonthComp) {
@@ -122,7 +121,6 @@ const handleEventsPush = (event, user) => {
   addEmpEvent(user, event);
 };
 // Add new states for employee stats
-console.log(import.meta.env.VITE_API_URL)
 const image=`${import.meta.env.VITE_API_URL}${user.profileImage}`
 return (
   <div className="min-h-screen bg-gradient-to-br from-blue-900 to-gray-900">
