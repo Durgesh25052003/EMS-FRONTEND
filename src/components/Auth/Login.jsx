@@ -89,7 +89,6 @@ const LoginPage = () => {
     }
 
     setIsLoading(true)
-    console.log(forgotEmail)
     forgetPassword(forgotEmail)
     // Simulate API call
     setTimeout(() => {
