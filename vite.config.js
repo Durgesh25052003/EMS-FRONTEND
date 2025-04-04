@@ -8,4 +8,7 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()
   ],
+  build: {
+    target: 'esnext', // Change target from 'es2020' to 'esnext'
+  }
 })
