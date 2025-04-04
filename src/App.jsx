@@ -3,7 +3,7 @@ import Login from "./components/Auth/Login"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import EmployeeDashBoard from '../src/components/Dashboard/EmployeeDashBoard';
 import authCheck from '../src/components/Auth/VerifyRole';
-import AdminDashboard from ' ./src/components/Dashboard/AdminDashBoard';
+import AdminDashboard from ' ../src/components/Dashboard/AdminDashboard';
 import { DrawerWithNavigation } from '../src/components/others/Admin-Others/AdminDrawer';
 import AdminEmpDash from '../src/components/others/Admin-Others/AdminEmpDash/AdminEmpDash';
 import AddEmployee from '../src/components/others/Admin-Others/AddEmployee';
